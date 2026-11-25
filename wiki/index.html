@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Degree Journey — Lawson Davey</title>
+<meta name="description" content="Lawson Davey's journey through the Bachelor of Digital Innovation at Yoobee Colleges, 2024–2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .wiki { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 56px; padding: 56px 0 96px; }
+  .wiki > * { min-width: 0; }
+  .toc { position: sticky; top: 96px; align-self: start; }
+  .toc h4 { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .toc ol { list-style: none; counter-reset: s; }
+  .toc li { counter-increment: s; }
+  .toc a { display: flex; gap: 10px; padding: 6px 10px; border-radius: 8px; text-decoration: none; font-size: 14.5px; font-weight: 500; color: var(--body); }
+  .toc a::before { content: counter(s, decimal-leading-zero); color: var(--muted); font-size: 12px; padding-top: 2px; font-variant-numeric: tabular-nums; }
+  .toc a:hover, .toc a.active { background: var(--soft); color: var(--accent); }
+  .wiki article > section { padding: 0 0 56px; margin-bottom: 56px; border-bottom: 1px solid var(--line); }
+  .wiki article > section:last-child { border-bottom: 0; }
+  .wiki h2 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 14px; display: flex; gap: 12px; align-items: baseline; }
+  .wiki h2 .n { font-size: 14px; color: var(--accent); font-weight: 700; }
+  .wiki h3 { font-size: 19px; margin: 28px 0 8px; }
+  .wiki p, .wiki li { max-width: 740px; }
+  .wiki ul { margin: 10px 0 0 20px; } .wiki li { margin: 5px 0; } .wiki li::marker { color: var(--accent); }
+  .timeline { position: relative; margin-top: 24px; padding-left: 28px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+  .tl { position: relative; padding-bottom: 22px; }
+  .tl::before { content: ""; position: absolute; left: -26px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--accent); }
+  .tl.done::before { background: var(--accent); }
+  .tl b { color: var(--ink); display: block; }
+  .tl span { color: var(--muted); font-size: 15px; }
+  .grades { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 14px; }
+  .grades th { text-align: left; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding: 9px 12px; border-bottom: 1px solid var(--line); background: var(--soft); }
+  .grades td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .grades td.g { font-weight: 700; color: var(--ink); white-space: nowrap; width: 70px; }
+  .pill { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 9px; border-radius: 99px; background: var(--accent-soft); color: var(--accent-ink); margin-left: 6px; }
+  .year-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: baseline; }
+  .year-head .avg { font-size: 14px; color: var(--muted); }
+  .mini-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+  .mini-stats div { background: var(--soft); border-radius: 12px; padding: 16px; }
+  .mini-stats b { display: block; font-size: 28px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; line-height: 1; }
+  .mini-stats span { font-size: 13px; color: var(--muted); display: block; margin-top: 6px; line-height: 1.35; }
+  .worklinks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+  .worklinks a { display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center; text-decoration: none; border: 1px solid var(--line); border-radius: 12px; padding: 10px; transition: border-color .15s; }
+  .worklinks a:hover { border-color: var(--accent); }
+  .worklinks img { width: 96px; height: 72px; object-fit: cover; border-radius: 8px; }
+  .worklinks b { color: var(--ink); display: block; font-size: 15px; }
+  .worklinks span { color: var(--muted); font-size: 13.5px; }
+  .skills { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 14px; }
+  .skills th, .skills td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .skills th { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); background: var(--soft); }
+  .table-wrap { overflow-x: auto; }
+  @media (max-width: 980px) { .wiki { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-top: 32px; } .toc { position: static; } .toc ol { display: flex; flex-wrap: wrap; gap: 4px; } }
+  @media (max-width: 680px) { .mini-stats, .worklinks { grid-template-columns: 1fr 1fr; } .worklinks a { grid-template-columns: 1fr; } .worklinks img { width: 100%; height: 110px; } }
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="../index.html">Lawson Davey<span>Marketing Technologist</span></a>
+  <ul><li><a href="../index.html#work">Work</a></li><li><a href="index.html" aria-current="page">Wiki</a></li><li class="hide-sm"><a href="../resume.html">Resume</a></li><li><a class="cta" href="../index.html#contact">Contact</a></li></ul>
+</div></nav>
+
+<header class="cs-hero" style="padding-bottom:0"><div class="wrap">
+  <div class="eyebrow">Wiki · Bachelor of Digital Innovation · Yoobee Colleges Christchurch</div>
+  <h1>My degree journey, 2024–2026</h1>
+  <p class="lede">How three years of study, alongside work, took me from a Certificate in Creative Media to being a Marketing Technologist at Delta Strike International. This covers what I studied, the projects that shaped me, where I struggled and what I’m taking into my career.</p>
+  <div class="mini-stats">
+    <div><b>3</b><span>years of the Bachelor of Digital Innovation</span></div>
+    <div><b>7 A+</b><span>grades across the degree, from product launch to Atriple</span></div>
+    <div><b>4</b><span>jobs alongside study, ending as Marketing Specialist</span></div>
+    <div><b>Nov 2026</b><span>graduated</span></div>
+  </div>
+</div></header>
+
+<div class="wrap wiki">
+  <aside class="toc">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="#start">Where I started</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#year1">Year 1: Foundations</a></li>
+      <li><a href="#year2">Year 2: Specialising</a></li>
+      <li><a href="#year3">Year 3: Industry practice</a></li>
+      <li><a href="#work">Work alongside study</a></li>
+      <li><a href="#growth">How my skills grew</a></li>
+      <li><a href="#lessons">What I learned</a></li>
+      <li><a href="#next">What’s next</a></li>
+    </ol>
+  </aside>
+
+  <article>
+    <section id="start">
+      <h2><span class="n">01</span>Where I started</h2>
+      <p>Before the degree I completed a <b>Certificate in Creative Media (Level 4)</b> at Yoobee. It gave me the design tools: InDesign, Photoshop, Illustrator, Premiere Pro, DaVinci Resolve and Fusion 360. I could make things look good, but I didn’t yet know how marketing worked or how to measure whether it did.</p>
+      <p>I started the Bachelor of Digital Innovation in 2024 to bring <b>marketing, business and technology</b> together. Over three years, the technical side of marketing became my focus: websites, tracking, CRM and automation.</p>
+    </section>
+
+    <section id="timeline">
+      <h2><span class="n">02</span>Timeline</h2>
+      <div class="timeline">
+        <div class="tl done"><b>Certificate in Creative Media</b><span>Design and media production foundations</span></div>
+        <div class="tl done"><b>Jan 2024: Started Pulsr Digital</b><span>My own web studio, building sites for local businesses</span></div>
+        <div class="tl done"><b>2024: Year 1</b><span>Design, marketing, web, entrepreneurship and campaigns foundations</span></div>
+        <div class="tl done"><b>Dec 2024: Business Support Co-ordinator, Venning Property</b><span>My first role running IT and marketing for a business</span></div>
+        <div class="tl done"><b>2025: Year 2</b><span>Branding, inbound, SEO &amp; CRM, product launch, digital advertising</span></div>
+        <div class="tl done"><b>Feb 2026: Marketing Specialist, Delta Strike International</b><span>Global website, CRM, Google Ads, trade shows</span></div>
+        <div class="tl done"><b>2026: Year 3</b><span>Growth hacking, leadership, collaborative studio, innovation, industry practice</span></div>
+        <div class="tl done"><b>Nov 2026: IAAPA Expo Orlando, then graduation</b><span>Ran Delta Strike’s trade show campaign, and finished the degree</span></div>
+      </div>
+    </section>
+
+    <section id="year1">
+      <h2><span class="n">03</span>Year 1, 2024: Foundations</h2>
+      <p>Year 1 covered the basics of each discipline the degree joins together: design, marketing, the web, entrepreneurship and campaigns. I finished with A averages in both Design Foundation and Marketing Foundation.</p>
+      <div class="table-wrap"><table class="grades">
+        <tr><th>Paper</th><th>Key work</th><th>Result</th></tr>
+        <tr><td>Design Foundation</td><td>Marketing collateral</td><td class="g">A</td></tr>
+        <tr><td>Marketing Foundation</td><td>Marketing plan: framework, consumer decision making, digital plan and messaging, launch and report</td><td class="g">A</td></tr>
+        <tr><td>Web &amp; Graphic Design</td><td>Promotional assets for a brand; website design</td><td class="g">B+</td></tr>
+        <tr><td>Entrepreneurship</td><td>Case study, reflective analysis, pitch presentation (A)</td><td class="g">A-</td></tr>
+        <tr><td>Campaigns</td><td>Copywriting; campaign plan for strategy and creativity (A); presentation</td><td class="g">A-</td></tr>
+      </table></div>
+      <h3>What it gave me</h3>
+      <ul>
+        <li>A structured way to plan marketing, from framework to launch to report, which I still use</li>
+        <li>My first website design project, the same year I started building sites for real clients at Pulsr</li>
+        <li>Pitching and presenting: my entrepreneurship pitch got an A</li>
+      </ul>
+    </section>
+
+    <section id="year2">
+      <h2><span class="n">04</span>Year 2, 2025: Specialising</h2>
+      <p>Year 2 was my strongest year for grades. It moved from basics into specialist areas, and it’s where I found the technical marketing I now do every day: <b>SEO, CRM and digital advertising</b>.</p>
+      <div class="table-wrap"><table class="grades">
+        <tr><th>Paper</th><th>Key work</th><th>Result</th></tr>
+        <tr><td>BDI201 Product Launch</td><td>Sustainable packaging, semiotic analysis and collateral, product launch: <b>A+ on all three</b></td><td class="g">A+</td></tr>
+        <tr><td>BDI210 Inbound Marketing</td><td>Case study, presentation (A+), inbound strategy</td><td class="g">A</td></tr>
+        <tr><td>BDI221B Creative Strategies</td><td>Major client brief project (group), reflection</td><td class="g">A</td></tr>
+        <tr><td>BDI200 Branding</td><td>Logo design (A), collateral material (A), presentation</td><td class="g">A-</td></tr>
+        <tr><td>BDI220 SEO &amp; CRM</td><td>SEO media content creation; CRM analysis and engagement strategies</td><td class="g">A-</td></tr>
+        <tr><td>BDI211B Digital Advertising</td><td>Case study (A+), group campaign client brief</td><td class="g">A-</td></tr>
+        <tr><td>BDI202 Project &amp; Stakeholder Management</td><td>Project proposal (A+), project plan, case study</td><td class="g">B+</td></tr>
+        <tr><td>BDI212 Integrated Marketing Communications</td><td>Campaigns analysis, campaign brief, reflection</td><td class="g">C+</td></tr>
+      </table></div>
+      <h3>Highs and lows</h3>
+      <ul>
+        <li><b>High:</b> six A+ results, including a clean sweep in Product Launch</li>
+        <li><b>High:</b> SEO &amp; CRM, which led directly to the HubSpot and tracking work I do at Delta Strike</li>
+        <li><b>Low:</b> Integrated Marketing Communications (C+) and the later parts of Project &amp; Stakeholder Management. These were longer, more analytical briefs, and they came in the same year I was working at Venning Property.</li>
+      </ul>
+    </section>
+
+    <section id="year3">
+      <h2><span class="n">05</span>Year 3, 2026: Industry practice</h2>
+      <p>In Year 3 the degree and my job came together. I started at Delta Strike in February, and the coursework let me bring real industry problems into class.</p>
+      <div class="table-wrap"><table class="grades">
+        <tr><th>Paper</th><th>Key work</th><th>Result</th></tr>
+        <tr><td>BDI322 Innovation Models</td><td><b>Atriple</b>, a server-side conversion tracking product: case study and wiki (A+), then a second round of testing and a pivot</td><td class="g">A+ <span class="pill">322.1</span></td></tr>
+        <tr><td>BDI311 Collaborative Studio</td><td><b>Dark Horse Coffee</b>: strategic portfolio, creative portfolio (A-), presentation (A-)</td><td class="g">B+</td></tr>
+        <tr><td>BDI310 Growth Hacking</td><td>Case study analysis, group client brief (B+)</td><td class="g">B</td></tr>
+        <tr><td>BDI320 Purpose-Driven Leadership</td><td>Group transformation plan, individual reflection (B)</td><td class="g">C+</td></tr>
+        <tr><td>BDI323 Industry Practice Studio</td><td><b>IAAPA Orlando 2026</b> campaign plan for Delta Strike; this portfolio</td><td class="g">In progress</td></tr>
+      </table></div>
+      <h3>The work I’m proudest of</h3>
+      <div class="worklinks">
+        <a href="../work/iaapa-orlando.html"><img src="../assets/iaapa/02-visit-us-at-iaapa-laser-tag.jpg" alt=""><div><b>IAAPA Orlando 2026</b><span>Real trade show campaign: 851 clicks, 2.4–4.6% CTR</span></div></a>
+        <a href="../work/atriple.html"><img src="../assets/atriple/landing-page.jpg" alt=""><div><b>Atriple</b><span>Product R&amp;D over two rounds of testing · A+</span></div></a>
+        <a href="../work/dark-horse.html"><img src="../assets/darkhorse/ig-3.jpg" alt=""><div><b>Dark Horse Coffee</b><span>Full creative campaign · A-</span></div></a>
+        <a href="../work/delta-strike-website.html"><img src="../assets/web/desktop-home.jpg" alt=""><div><b>Delta Strike website</b><span>+60% traffic, 12 languages</span></div></a>
+      </div>
+      <blockquote class="quote">“Great work on the strategic document… the way you have used canvases to generate real insights is wonderful… Much better from you this time Lawson, well done.”<cite>Tutor feedback, BDI322.1 Case Study (A+)</cite></blockquote>
+    </section>
+
+    <section id="work">
+      <h2><span class="n">06</span>Work alongside study</h2>
+      <p>I worked the whole way through the degree. Each job built a different skill, and the degree gave me the frameworks to use them better.</p>
+      <div class="table-wrap"><table class="grades">
+        <tr><th>When</th><th>Role</th><th>What it taught me</th></tr>
+        <tr><td>Jan 2024 – now</td><td><b>Founder, Pulsr Digital</b></td><td>Building and launching websites for 7 local businesses; working directly with clients</td></tr>
+        <tr><td>Mar – Jul 2024</td><td>Merchandiser, Coca-Cola</td><td>Reliability: 5am starts across multiple supermarkets</td></tr>
+        <tr><td>Aug – Nov 2024</td><td>Front of House, Holy Moly</td><td>Customer service on the floor, at reception and behind the bar</td></tr>
+        <tr><td>Dec 2024 – Dec 2025</td><td><b>Business Support Co-ordinator, Venning Property</b></td><td>Running all IT and marketing for a start-up; a $7k seminar campaign; internal tools in React and Python</td></tr>
+        <tr><td>Feb 2026 – now</td><td><b>Marketing Specialist, Delta Strike International</b></td><td>Global website rebuild (+60% traffic), HubSpot CRM, Google Ads (4 conversions a day), IAAPA Orlando</td></tr>
+      </table></div>
+    </section>
+
+    <section id="growth">
+      <h2><span class="n">07</span>How my skills grew</h2>
+      <div class="table-wrap"><table class="skills">
+        <tr><th>Skill</th><th>Year 1</th><th>Year 2</th><th>Year 3 and work</th></tr>
+        <tr><td><b>Design</b></td><td>Collateral, promotional assets</td><td>Logo design, packaging, semiotics (A+)</td><td>IAAPA ads and brochures, Dark Horse campaign</td></tr>
+        <tr><td><b>Web</b></td><td>First website design</td><td>SEO content creation</td><td>Next.js global site in 12 languages; React prototype</td></tr>
+        <tr><td><b>Marketing strategy</b></td><td>Marketing plan framework</td><td>Inbound strategy, digital advertising</td><td>Full trade show campaign with targeted audiences</td></tr>
+        <tr><td><b>Data &amp; tracking</b></td><td>Launch reporting</td><td>CRM analysis</td><td>GA4, Google Ads conversion tracking, Atriple</td></tr>
+        <tr><td><b>Research &amp; innovation</b></td><td>Entrepreneurship case study</td><td>Project proposal (A+)</td><td>Two-round lean testing and a pivot (Atriple)</td></tr>
+      </table></div>
+    </section>
+
+    <section id="lessons">
+      <h2><span class="n">08</span>What I learned</h2>
+      <ul>
+        <li><b>I’m strongest when the work is hands-on.</b> My best results (Product Launch, Atriple, Dark Horse creative) were projects where I could build or design something real.</li>
+        <li><b>Big analytical briefs need the same planning as campaigns.</b> My lowest marks came in long report-based papers, often during busy work periods. I now plan them earlier.</li>
+        <li><b>Real work makes coursework better, and the reverse is true too.</b> Atriple came from a tracking problem I see at work, and the IAAPA campaign became my BDI323 project.</li>
+        <li><b>Test before you commit.</b> Atriple taught me to set decision rules before the results come in, and to accept when the evidence says pivot.</li>
+      </ul>
+    </section>
+
+    <section id="next">
+      <h2><span class="n">09</span>What’s next</h2>
+      <p>I’m continuing as <b>Marketing Specialist at Delta Strike International</b>, growing its global marketing systems. Alongside that, I’ll keep running <b>Pulsr Digital</b> and develop the managed tracking service that came out of Atriple.</p>
+      <p>Longer term, I want to keep building a career as a <b>Marketing Technologist</b>: someone who can plan the campaign and build the technology behind it.</p>
+      <div class="btns"><a class="btn" href="../index.html#work">See my portfolio</a><a class="btn ghost" href="../resume.html">View resume</a></div>
+    </section>
+  </article>
+</div>
+
+<footer class="site"><div class="wrap"><div class="base" style="margin-top:0;border-top:0;padding-top:0"><span>© 2026 Lawson Davey</span><span><a href="../index.html">Home</a> · <a href="../resume.html">Resume</a></span></div></div></footer>
+<script>
+  const links=[...document.querySelectorAll('.toc a')];
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting) links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id)); }),{rootMargin:'-30% 0px -65% 0px'});
+  document.querySelectorAll('article > section').forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
